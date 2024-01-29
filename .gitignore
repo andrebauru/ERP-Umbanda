@@ -1,0 +1,9 @@
+# Ignorar todos os arquivos de configuração
+*.conexao.php
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios específicos
+node_modules/
+vendor/
