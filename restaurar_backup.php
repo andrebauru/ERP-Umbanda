@@ -1,0 +1,1 @@
+<?php require_once 'app.php';require_admin();layout_start('Backup e restauração');?><div class="card p-4"><p>O backup é baixado pela área de administração. Para restaurar, execute o arquivo SQL no MySQL após conferir seu conteúdo.</p><a class="btn btn-primary" href="backup_dados.php">Baixar backup agora</a></div><?php layout_end();

@@ -1,0 +1,7 @@
+{
+  "name": "controle-gastos/financeiro",
+  "description": "Aplicação pessoal de gestão financeira em PHP e MySQL",
+  "type": "project",
+  "require": {"php": ">=8.1"},
+  "suggest": {"dompdf/dompdf": "Geração opcional de relatórios PDF"}
+}

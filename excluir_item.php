@@ -1,0 +1,1 @@
+<?php require_once 'app.php'; require_login();if($_SERVER['REQUEST_METHOD']!=='POST')redirect('visualizar_gastos.php');check_csrf();$s=db()->prepare('DELETE FROM transacoes WHERE id=? AND usuario_id=?');$s->execute([(int)($_POST['id']??0),user()['id']]);flash('success','Lançamento excluído.');redirect('visualizar_gastos.php');

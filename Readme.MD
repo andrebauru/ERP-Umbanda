@@ -77,9 +77,12 @@ projeto_controle_gastos/
 ## Instruções de Uso
 
 1. Clone o repositório ou baixe os arquivos do projeto.
-2. Configure o banco de dados MySQL e execute o script `criar_tabelas.sql` para criar as tabelas necessárias.
-3. Configure o arquivo `conexao.php` com as informações de acesso ao seu banco de dados.
-4. Acesse o projeto através de um servidor PHP.
+2. Configure o banco de dados MySQL e execute `criar_tabelas.sql`.
+3. Defina `DB_HOST`, `DB_NAME`, `DB_USER` e `DB_PASS` no ambiente (os padrões são `127.0.0.1`, `controle_gastos`, `root` e senha vazia).
+4. Crie o primeiro usuário administrador (por exemplo, em um terminal PHP): `php -r "require 'app.php'; db()->prepare('INSERT INTO usuarios(nome,email,senha,perfil) VALUES (?,?,?,?)')->execute(['Administrador','admin@exemplo.com',password_hash('troque-esta-senha', PASSWORD_DEFAULT),'admin']);"`
+5. Inicie com `php -S localhost:8000` e acesse `http://localhost:8000`.
+
+O sistema usa PDO com prepared statements, sessões, CSRF, `password_hash`, validação e mensagens flash. Dompdf é apenas uma sugestão opcional; o relatório pode ser impresso/salvo como PDF pelo navegador sem dependências adicionais. Nunca publique credenciais do banco e faça backups em local protegido.
 
 ## Licença
 

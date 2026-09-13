@@ -1,0 +1,1 @@
+<?php require_once 'app.php'; redirect(user() ? 'dashboard.php' : 'login.php');
